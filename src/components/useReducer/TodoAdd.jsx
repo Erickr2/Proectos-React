@@ -1,7 +1,7 @@
 import React from 'react'
 import { Useform } from '../../hooks/Useform'
 
-export const TodoAdd = ({onNewTodo}) => { //recibe uuna la funcion de nu nuevo todo
+export const TodoAdd = ({onNewTodo}) => { //recibe una la funcion de nu nuevo todo
 
   /* llamamos a mi Hook que me ayuda a controlar el estado de un form, recibimos una descripcion que viene de mi todo, el controladore del cambio del input  y el reste del form */
   const {desc, onInputChange, onResetForm} = Useform({
