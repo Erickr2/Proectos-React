@@ -19,10 +19,11 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { MainApp } from "./components/useContext/MainApp";
 
+
+
 ReactDOM.render(
   <BrowserRouter>
-  
-  <MainApp />, document.getElementById('root')
-  </BrowserRouter>
+  <MainApp />
+  </BrowserRouter>, document.getElementById('root')
  
 );

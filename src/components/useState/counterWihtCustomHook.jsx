@@ -15,7 +15,7 @@ export const CounterWihtCustomHook = () => {
     <hr />
 
     {/* le pasamos el evento onClick con mi funcion del componente UseCounter */}
-    <button onClick={ () => increment(2) } className='btn'>+1</button>
+    <button onClick={ () => increment(2) } className='btn btn-primary'>+1</button>
     <button onClick={ reset } className='btn'>reset</button>
     <button onClick={ () => decrement(2) } className='btn'>-1</button>
 

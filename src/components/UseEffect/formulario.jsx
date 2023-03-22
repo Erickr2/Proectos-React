@@ -31,10 +31,11 @@ export const Formulario = () => {
 
   //controlador de los cambios en el input, recibe el objeto del evento(target)
   const handleInputChange = ({ target }) => {
+    const {name, value} = target;
     /* modificador de estado, inyectamos los valores de mi FormState */
     setFormState({
       ...FormState,
-      [target.name]: target.value  /*obtenesmos del evento que esta ocurrindo el name/ target.value hace referencia al valor que me mandan  */
+      [name]: value  /*obtenesmos del evento que esta ocurrindo el name/ target.value hace referencia al valor que me mandan  */
     })
   }
 
@@ -61,7 +62,7 @@ export const Formulario = () => {
     <input
     type='text'
     name='email'
-    className='form-control'
+    className='form-control mt-2'
     placeholder='@gmail.com'
     autoComplete='off'
     value={email}

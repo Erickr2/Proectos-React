@@ -21,7 +21,7 @@ export const Message = () => {
     
         //una vez que cambie el estado que activa mi useEffect, limpiamos la funcion con un(removeEventListener)
       return () => {
-        window.removeEventListener('mousemove', mouseMove);//quiere decir que ya no halla ningun escuchador
+        window.removeEventListener('mousemove', mouseMove);//quiere decir que ya no hay ningun escuchador
       }
     }, [])
     

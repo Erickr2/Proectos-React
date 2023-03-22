@@ -12,28 +12,27 @@ modificamos los valores SetFormState() agregamos lo que ya estaba y le pasamos l
 
 
 export const Useform = ( initialForm = {} ) => {
-  
-    const [FormState, setFormState] = useState(initialForm);
+  //creamos un estado donde mi estaod incial es initialform => objeto 
+  const [FormState, setFormState] = useState( initialForm ); 
 
-    const onInputChange = ({ target }) => {
-      const {name, value} = target; /* desestructuramos los valores a usar de mi evento actual */
-      /* modificador de estado, inyectamos los valores de mi FormState */
-        setFormState({
-          ...FormState,
-          [ name ]: value  /*obtenesmos del evento que esta ocurrindo el name/ value hace referencia al valor que me mandan  */
-        });     
-      }
+  const onInputChange = ({ target }) => {
+    const {name, value} = target;
+    /* modificador de estado, inyectamos los valores de mi FormState */
+    setFormState({
+      ...FormState,
+      [name]: value  /*obtenesmos del evento que esta ocurrindo el name/ target.value hace referencia al valor que me mandan  */
+    })
+  }
 
-      const onResetForm = () => {
-        setFormState(initialForm);
-      }
-
-      /* retornamos nuestro values de nuestro estado y nuestra funcion */
+  const onReset = () => {
+    setFormState(initialForm)
+  }
+    
 
       return {
-        ...FormState,
+        ...FormState, //podemos expandir el estado para desestructurarlo directamente y no tener que hacerlo desde mi estado FormState
         FormState,
         onInputChange,
-        onResetForm
+        onReset
       }
 }
